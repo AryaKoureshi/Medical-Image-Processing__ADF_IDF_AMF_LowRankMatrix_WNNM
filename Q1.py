@@ -1,22 +1,14 @@
 # %% part 1: ADF
 import numpy as np
 import cv2
-from scipy.ndimage import gaussian_filter
 import matplotlib.pyplot as plt
-
-
-def add_gaussian_noise(image, mean=0.05, var=0.01):
-    sigma = var**0.5
-    gaussian = np.zeros_like(image)
-    gaussian = cv2.randn(gaussian, mean, sigma)
-    noisy_gray_image = cv2.add(image, gaussian)
-    return noisy_gray_image
+from skimage.util import random_noise
 
 
 image = cv2.imread('C:/Users/aryak/OneDrive/Desktop/MAM/HW03/image_anisotropic.png', cv2.IMREAD_GRAYSCALE)
 image = cv2.normalize(image, None, 0, 1, cv2.NORM_MINMAX, dtype=cv2.CV_32F)  # normalized image
 
-noisy_image = add_gaussian_noise(image, mean=0.05, var=0.01)
+noisy_image = random_noise(image, mode='gaussian', var=0.01)
 
 cv2.imwrite('C:/Users/aryak/OneDrive/Desktop/MAM/HW03/noisyimage_anisotropic.png', noisy_image * 255)
 
