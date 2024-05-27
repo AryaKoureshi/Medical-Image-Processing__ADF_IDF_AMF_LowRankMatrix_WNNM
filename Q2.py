@@ -211,7 +211,7 @@ plt.show()
 
 # %%
 '''
-### Step 4: Comparison with Other Filters
+### Comparison with Other Filters
 
 Gaussian filters and other denoising techniques like Total Variation and Non-Local Means can be compared based on their denoising performance and preservation of image details.
 
