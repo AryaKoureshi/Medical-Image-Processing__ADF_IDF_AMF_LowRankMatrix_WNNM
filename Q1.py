@@ -122,7 +122,7 @@ itr = 100
 # Test the ADF with different methods and parameters
 for mth in ['exponential', 'inverse_quadratic']:
     for lam in [0.01, 0.05, 0.1, 0.2, 0.4, 0.8, 1]:
-        for k in [0.01, 0.05, 0.1, 0.2, 0.4, 0.8, 1]:
+        for k in [0.2]:
             filtered_image = anisotropic_diffusion(noisy_image.copy(), iterations=itr, lambda_=lam, k=k, method=mth)
             filtered_images[f'lambda={lam}, k={k}, method={mth}'] = filtered_image
 
