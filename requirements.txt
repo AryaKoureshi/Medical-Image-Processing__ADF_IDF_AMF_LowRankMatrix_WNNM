@@ -2,7 +2,7 @@ numpy==1.23.5
 opencv-python==4.5.5
 matplotlib==3.5.2
 scikit-image==0.19.2
-torch==1.11.0
+torch==2.2.0
 pyiqa==0.1.5
 os==0.1.4
 cupy==10.4.0
